@@ -27,11 +27,10 @@ if __name__=='__main__':
     print(f'Generating detection answers for model {m}')
     #Load model
     if m in ['GPT41', 'o3', 'gemini-1.5-pro', 'gemini-1.5-flash']:
-        model, tokenizer, image_processor, context_len= m, '', '', ''
+        model, tokenizer = m, ''
     else:
         # pass
         model, tokenizer = load_model(m)
-        image_processor, context_len = '', ''
     print('Model loaded')
 
 
@@ -104,8 +103,6 @@ if __name__=='__main__':
         predicted_answer = generate_answer(image_path, 
                                         prompt_real if args.dataset=='misviz' else prompt_synth, 
                                         tokenizer, 
-                                        image_processor,
-                                        context_len,
                                         model, 
                                         m, 
                                         max_tokens)

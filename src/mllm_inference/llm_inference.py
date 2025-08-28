@@ -19,7 +19,7 @@ except:
     pass
 
 
-def generate_answer_qwen25vl(image_path, prompt, tokenizer, image_processor, context_len, model, max_tokens=200):
+def generate_answer_qwen25vl(image_path, prompt, tokenizer, model, max_tokens=200):
     if image_path:
         image = Image.open(image_path)
         messages = [{"role": "user",
@@ -35,7 +35,7 @@ def generate_answer_qwen25vl(image_path, prompt, tokenizer, image_processor, con
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True)[0]   
     return response
 
-def generate_answer_qwen25vl_32B(image_path, prompt, tokenizer, image_processor, context_len, model, max_tokens=200):
+def generate_answer_qwen25vl_32B(image_path, prompt, tokenizer, model, max_tokens=200):
     dtype   = next(model.parameters()).dtype   # bfloat16 or float16
     device  = next(model.parameters()).device  
     if image_path:
@@ -54,14 +54,14 @@ def generate_answer_qwen25vl_32B(image_path, prompt, tokenizer, image_processor,
     return response
 
 
-def generate_answer_internvl3(image_path, prompt, tokenizer, image_processor, context_len, model, max_tokens=200):
+def generate_answer_internvl3(image_path, prompt, tokenizer, model, max_tokens=200):
     generation_config = dict(max_new_tokens=max_tokens, do_sample=False)
     pixel_values = load_image_internvl2(image_path, max_num=12).to(torch.bfloat16).cuda()
     response = model.chat(tokenizer, pixel_values, prompt, generation_config)
     return response
 
 
-def generate_answer_internvl3_38B(image_path, prompt, tokenizer, image_processor, context_len, model, max_tokens=200):
+def generate_answer_internvl3_38B(image_path, prompt, tokenizer,  model, max_tokens=200):
     dtype   = next(model.parameters()).dtype   # bfloat16 or float16
     device  = next(model.parameters()).device 
 
@@ -71,7 +71,7 @@ def generate_answer_internvl3_38B(image_path, prompt, tokenizer, image_processor
     return response
 
 
-def generate_answer_gemini(image_path, prompt, tokenizer, image_processor, context_len, model, max_tokens):
+def generate_answer_gemini(image_path, prompt, tokenizer, model, max_tokens):
     #Prepare input
     if image_path:
         with open(image_path, 'rb') as f:
@@ -116,7 +116,7 @@ def create_file(file_path):
         )
         return result.id
 
-def generate_answer_gpt4v(image_path, prompt, tokenizer, image_processor, context_len, model, max_tokens):
+def generate_answer_gpt4v(image_path, prompt, tokenizer, model, max_tokens):
     if model=='GPT41':
         deployment_name ='gpt-4.1-2025-04-14' 
     else: 
