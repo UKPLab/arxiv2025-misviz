@@ -1,6 +1,6 @@
 import argparse
 from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score
-from utils import *
+import json 
 
 
 def post_process_pred(pred):
@@ -64,11 +64,11 @@ if __name__=='__main__':
     args = parser.parse_args()
 
     print('-----------------------------------------')
-    metadata = load_json(f"data/{args.dataset}/{args.dataset}.json")
+    metadata = json.load(open(f"data/{args.dataset}/{args.dataset}.json", encoding="utf-8"))
 
     print(f"{args.model} - {args.dataset}")
     if args.use_subset:
         print("Results reported on subset with bar, line, and pie charts")
-    results = load_json(f"results/{args.model}/{args.dataset}_{args.split}.json")
+    results = json.load(open(f"results/{args.model}/{args.dataset}_{args.split}.json", encoding="utf-8"))
     compute_metrics(results,subset=args.use_subset)
     print('-----------------------------------------')
