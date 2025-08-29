@@ -23,16 +23,15 @@ In this work, we introduce Misviz, a benchmark of 2,604 real-world visualization
 
 ## tl;dr 
 
-- Misleading visualizations are a dangerous form of misinformation. We need to develop methods to detect design issues in charts that make them misleading
-- We introduce two datasets for the task of misleading visualization detection
+😯 Misleading visualizations are a dangerous form of misinformation. We need to develop methods to detect design issues in charts that make them misleading
+📊 We introduce two datasets for the task of misleading visualization detection
   - Misviz-synth: a large dataset of synthetic matplotlib charts based on real-world data tables
   - Misviz: a small benchmark dataset of real-world charts collected from the web
   - Instructions to load the datasetes are provided in [Datasets](#datasets)
-- We evaluate three type of models on both datasets
+🤖 We evaluate three type of models on both datasets
   - Zero-shot MLLMs
   - A new rule-based linter that verifies the axis metadata of a visualization
   - Two classifiers fine-tuned on Misviz-synth
-- Our results show that both datasets are challenging
 
 
 <p align="center">
@@ -61,7 +60,7 @@ $ pip install -r requirements.txt
 ### Misviz 
 
 - *data/misviz/misviz.json* contains the task labels and metadata
-- The visualizations can be downloaded from the web using the following script.
+- The visualizations can be downloaded from the web using the following script
 
 ```python
 $ python data/download_misviz_images.py --use_wayback 0
