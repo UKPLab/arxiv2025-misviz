@@ -106,6 +106,28 @@ The rule-based linter can be evaluated both on ground truth and predicted axis m
 $ python src/rule_based_linter/linter.py --datasets misviz_synth --split test --use_predicted_axis 0
 ```
 
+### Fine-tuned classifiers
+
+In order to train the classifiers, the embeddings of the visualization images and of the axis metadata can be pre-computed using TinyChart and TAPAS, respectively.
+
+For image embeddings, adjust and run the following shell script:
+
+```
+$ sbatch src/model_tuning/01_precomputation/01_run_all_img_precomp.sh
+```
+
+For axis metadata embeddings, run the following python script.
+
+```python
+$ python src/model_tuning/03_deplot_axis_extraction_classifier/02_encode_tables.py
+```
+
+Then, the classifiers can be trained as follows:
+
+```python
+$ python src/model_tuning/03_deplot_axis_extraction_classifier/03_run_all_experiments.py
+```
+
 ## Citation
 
 If you find this work relevant to your research or use this code in your work, please cite our paper as follows:
