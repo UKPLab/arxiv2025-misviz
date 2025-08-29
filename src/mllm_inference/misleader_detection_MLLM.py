@@ -1,5 +1,5 @@
 from tqdm import tqdm
-from data.utils import *
+from utils import *
 from llm_inference import *
 from loaders import *
 import transformers
