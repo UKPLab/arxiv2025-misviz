@@ -7,7 +7,6 @@
 
 source /miniconda3/etc/profile.d/conda.sh
 conda activate lying_charts
-export GPUS_PER_NODE=2
 
 
 
