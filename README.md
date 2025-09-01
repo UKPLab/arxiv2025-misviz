@@ -28,7 +28,7 @@ In this work, we introduce Misviz, a benchmark of 2,604 real-world visualization
 📊 We introduce two datasets for the task of misleading visualization detection
   - Misviz-synth: a large dataset of synthetic matplotlib charts based on real-world data tables
   - Misviz: a small benchmark dataset of real-world charts collected from the web
-  - Instructions to load the datasetes are provided in [Datasets](#datasets)
+  - Instructions to load the datasets are provided in [Datasets](#datasets)
 
 🤖 We evaluate three type of models on both datasets
   - Zero-shot MLLMs
