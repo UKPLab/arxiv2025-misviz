@@ -62,7 +62,7 @@ $ pip install -r requirements.txt
 ### Misviz-synth
 
 - *data/misviz_synth/misviz_synth.json* contains the task labels and metadata
-- The visualizations, the underlying data tables, and the axis metadata can be downloaded from TU-Biblio
+- The visualizations, the underlying data tables, and the axis metadata can be downloaded from [TUdatalib](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/4782)
 
 ### Misviz 
 
