@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/github/license/UKPLab/ukp-project-template)](https://opensource.org/licenses/Apache-2.0)
 [![Python Versions](https://img.shields.io/badge/Python-3.9-blue.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 
-This repository contains the datasets and code associated with the arXiv preprint: [Is this chart lying to me? Automating the detection of misleading visualizations](https://arxiv.org/abs/2502.20503). The Misviz and Misviz-synth datasets are released under a **CC-BY-SA 4.0** license. The code is released under an **Apache 2.0** license.
+This repository contains the datasets and code associated with the arXiv preprint: [Is this chart lying to me? Automating the detection of misleading visualizations](https://arxiv.org/abs/2508.21675). The Misviz and Misviz-synth datasets are released under a **CC-BY-SA 4.0** license. The code is released under an **Apache 2.0** license.
 
 Contact person: [Jonathan Tonglet](mailto:jonathan.tonglet@tu-darmstadt.de) 
 
@@ -24,14 +24,21 @@ In this work, we introduce Misviz, a benchmark of 2,604 real-world visualization
 ## tl;dr 
 
 😯 Misleading visualizations are a dangerous form of misinformation. We need to develop methods to detect design issues in charts that make them misleading
+
 📊 We introduce two datasets for the task of misleading visualization detection
   - Misviz-synth: a large dataset of synthetic matplotlib charts based on real-world data tables
   - Misviz: a small benchmark dataset of real-world charts collected from the web
   - Instructions to load the datasetes are provided in [Datasets](#datasets)
+
 🤖 We evaluate three type of models on both datasets
   - Zero-shot MLLMs
   - A new rule-based linter that verifies the axis metadata of a visualization
   - Two classifiers fine-tuned on Misviz-synth
+
+💡Our experiment results reveal several key insights
+  - The task is challenging both on synthetic and real-world visualizations even for SOTA MLLMs
+  - Fine-tuned classifiers can generalize to some extent to real-world visualizations
+  - The axis extraction phase is very error prone on real-world visualizations
 
 
 <p align="center">
@@ -136,10 +143,10 @@ If you find this work relevant to your research or use this code in your work, p
 @article{tonglet2025misviz,
   title={Is this chart lying to me? Automating the detection of misleading visualizations},
   author={Tonglet, Jonathan and Zimny, Jan and Tuytelaars, Tinne and Gurevych, Iryna},
-  journal={arXiv preprint arXiv:XXXX.XXXX},
+  journal={arXiv preprint arXiv:2508.21675},
   year={2025},
-  url={https://arxiv.org/abs/XXXX.XXXX},
-  doi={10.48550/arXiv.XXXX.XXXX}
+  url={https://arxiv.org/abs/2508.21675},
+  doi={10.48550/arXiv.2508.21675}
 }
 ```
 
