@@ -98,6 +98,7 @@ $ pip install -r requirements.txt
 
 ## Experiments
 
+
 ### Evaluate zero-shot MLLMs
 
 ```python
@@ -116,7 +117,7 @@ We also provide code to conduct experiments with GPT-4.1, GPT-o3, Gemini-1.5-fla
 ### Fine-tune DePlot for axis extraction and predict axis metadata
 
 To apply the linter to Misviz and to train the classifiers, we need to extract axis metadata from visualizations. This is done by fine-tuning DePlot on the  Misviz-synth train set. 
-To fine-tune deplot, we provide a shell script ```src/model_tuning/02_deplot_finetune/01_run_accelerate_deplot_finetuning.sh``` which you can adjust to your needs.
+To fine-tune deplot, we provide a shell script which you can adjust to your needs.
 
 ```
 $ sbatch src/model_tuning/02_deplot_finetune/01_run_accelerate_deplot_finetuning.sh
