@@ -46,18 +46,9 @@ In this work, we introduce Misviz, a benchmark of 2,604 real-world visualization
 </p>
 
 
-
-## Environment
-
-Follow these instructions to recreate the environment used for our experiments.
-
-```
-$ conda create --name lying_charts python=3.9
-$ conda activate lying_charts
-$ pip install -r requirements.txt
-```
-
 ## Datasets
+
+We briefly describe the datasets below. More information can be found in the [README](https://github.com/UKPLab/arxiv2025-misviz/tree/main/data) of the data folder.
 
 ### Misviz-synth
 
@@ -71,6 +62,38 @@ $ pip install -r requirements.txt
 
 ```python
 $ python data/download_misviz_images.py --use_wayback 0
+```
+### Misviz instance example
+
+<p align="center">
+  <img width="70%" src="img/example.png" alt="Example instance of Misviz" />
+</p>
+
+```json
+  {
+      "image_path": "img/68718369730_misrepresentation.png",
+      "image_url": "https://64.media.tumblr.com/88844d8c3be687e0549e7b7c0a403293/tumblr_mx1as48rLr1sgh0voo1_1280.jpg",
+      "chart_type": [
+          "bar chart",
+          "pie chart"
+      ],
+      "misleader": [
+          "misrepresentation"
+      ],
+      "wayback_image_url": "https://web.archive.org/web/20250619095605/https://64.media.tumblr.com/88844d8c3be687e0549e7b7c0a403293/tumblr_mx1as48rLr1sgh0voo1_1280.jpg",
+      "split": "test"
+  }
+```
+
+
+## Environment
+
+Follow these instructions to recreate the environment used for our experiments.
+
+```
+$ conda create --name lying_charts python=3.9
+$ conda activate lying_charts
+$ pip install -r requirements.txt
 ```
 
 ## Experiments
