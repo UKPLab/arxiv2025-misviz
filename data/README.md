@@ -37,6 +37,7 @@ $ python data/download_misviz_images.py --use_wayback 0
 ```use_wayback``` is a paramater to decide whether the image is scraped from the original URL (0) or from an archived version of the URL on the Wayback Machine (1).
 The archived URL serves as a backup.
 
+Please contact  `jonathan.tonglet@tu-darmstadt.de` if you face issues downloading the images of Misviz.
 
 Each record contains the following items: 
 
