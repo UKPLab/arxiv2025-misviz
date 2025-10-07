@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Is this chart lying to me? Automating the detection of misleading visualizations">
+  <meta property="og:title" content="Is this chart lying to me? Automating the detection of misleading visualizations"/>
+  <meta property="og:description" content="LLM, misleading visualization, misinformation"/>
+  <meta property="og:url" content="https://ukplab.github.io/misleading-visualizations/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_twitter_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Multimodal AI, LLM, MLLM, VLM, Misleading visualization, Misleading chart, Misinformation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Is this chart lying to me? Automating the detection of misleading visualizations</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <!-- <div class="logo-container">
+    <img src="static/images/tuda_ukp_logo.png" alt="Logo" class="logo" width="600" style="margin-left: auto; margin-right: auto; display: block;">
+  </div> -->
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><img src="static/images/project_icon.png" width="50" /> Is this chart lying to me? Automating the detection of misleading visualizations</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://jtonglet.github.io/" target="_blank"><b>Jonathan Tonglet</b></a><sup>1,2,3</sup>,</span>
+                <span class="author-block">
+                  <b>Jan Zimny</b><sup>1</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://www.esat.kuleuven.be/psi/TT" target="_blank"><b>Tinne Tuytelaars</b></a><sup>2</sup>,</span>
+                    <span class="author-block">
+                      <a href="https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp" target="_blank"><b>Iryna Gurevych</b></a><sup>1</sup>
+                    </span>
+                  </div> 
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <sup>1</sup>UKP Lab, TU Darmstadt &emsp;
+                      <sup>2</sup>Computer Science, KU Leuven&emsp;
+                      <sup>3</sup>Electrical Engineering, KU Leuven&emsp;
+                    </span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2508.21675" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/UKPLab/arxiv2025-misviz" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2508.21675" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">How to detect a misleading visualization?</h2>
+      <h2 class="subtitle has-text-justified">
+       😯 Misleading visualizations are a dangerous form of misinformation. They misrepresent data tables by breaking various chart design conventions. We need to develop methods to detect design issues in charts that make them misleading. <br>
+        In this work, we introduce two datasets for the task of misleading visualization detection: Misviz and Misviz-synth. <br>
+        🤖 We evaluate three type of models on both datasets: zero-shot MLLMs, rule-based linters, and fine-tuned classifiers.
+      </h2>
+      <img src="static/images/misviz_examples.png" height="60%"/>
+      <!-- <h2 class="subtitle has-text-centered">Example tasks in <span style="font-weight:bold;">BLINK</span>.</h2> -->
+      <h2 class="hero-body has-text-centered">
+        <!-- <br> -->
+        Three examples of misleading visualizations with QA pairs.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Misleading visualizations are a potent driver of misinformation on social media and the web. By violating chart design principles, they distort data and lead readers to draw inaccurate conclusions. Prior work has shown that both humans and multimodal large language models (MLLMs) are frequently deceived by such visualizations. Automatically detecting misleading visualizations and identifying the specific design rules they violate could help protect readers and reduce the spread of misinformation. However, the training and evaluation of AI models has been limited by the absence of large, diverse, and openly available datasets. In this work, we introduce Misviz, a benchmark of 2,604 real-world visualizations annotated with 12 types of misleaders. To support model training, we also release Misviz-synth, a synthetic dataset of 81,814 visualizations generated using Matplotlib and based on real-world data tables. We perform a comprehensive evaluation on both datasets using state-of-the-art MLLMs, rule-based systems, and fine-tuned classifiers. Our results reveal that the task remains highly challenging.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Misviz -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Misviz and Misviz-synth</h2>
+        <img src="static/images/example.png" width="70%"/>
+        <h2 class="content has-text-justified">
+          We introduce two datasets. (1) Misviz-synth contains 81,814 synthetic visualizations generated with Matplotlib. It can be used to train models.
+          (2) Misviz contains 2,604 real-world visualizations collected from various websites. It is a challenging evaluation benchmark. The image below shows the following instance of Misviz:
+          <pre><code>{
+      "image_path": "img/68718369730_misrepresentation.png",
+      "image_url": "https://64.media.tumblr.com/88844d8c3be687e0549e7b7c0a403293/tumblr_mx1as48rLr1sgh0voo1_1280.jpg",
+      "chart_type": [
+          "bar chart",
+          "pie chart"
+      ],
+      "misleader": [
+          "misrepresentation"
+      ],
+      "wayback_image_url": "https://web.archive.org/web/20250619095605/https://64.media.tumblr.com/88844d8c3be687e0549e7b7c0a403293/tumblr_mx1as48rLr1sgh0voo1_1280.jpg",
+      "split": "test"
+  }</code></pre>
+        </h2>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Misviz-synth -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Models</h2>
+        <img src="static/images/baselines.png" width="70%"/>
+        <h2 class="content has-text-justified">
+          We consider three types of baselines: zero-shot MLLMs, rule-based linters, and fine-tuned classifiers. The latter two require to extract the axis metadata from the chart as an intermediate step.
+        </h2>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Results</h2>
+        <img src="static/images/results.png" width="70%"/>
+        <h2 class="content has-text-justified">
+          💡Our experiment results reveal several key insights. (1) The task is challenging both on synthetic and real-world visualizations even for SOTA MLLMs. (2) Fine-tuned classifiers can generalize to some extent to real-world visualizations. (3) The axis extraction phase is very error prone on real-world visualizations.<br>
+          Learn more by reading our paper and stay tuned for future work!
+        </h2>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{tonglet2025misviz,
+        title={Is this chart lying to me? Automating the detection of misleading visualizations},
+        author={Tonglet, Jonathan and Zimny, Jan and Tuytelaars, Tinne and Gurevych, Iryna},
+        journal={arXiv preprint arXiv:2508.21675},
+        year={2025},
+        url={https://arxiv.org/abs/2508.21675},
+        doi={10.48550/arXiv.2508.21675}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          </p>
+          <p>
+            <a href="https://www.flaticon.com/free-icons/benefit" title="benefit icons">Benefit icons created by Vectorslab - Flaticon</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
