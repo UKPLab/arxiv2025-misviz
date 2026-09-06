@@ -162,7 +162,7 @@ def generate_answer_gpt4v(image_path, prompt, tokenizer, model, max_tokens):
 
 
 
-def generate_answer(image_path, prompt, tokenizer, image_processor, context_len, model, template, max_tokens=200):
+def generate_answer(image_path, prompt, tokenizer, model, template, max_tokens=200):
     prompt_map = {'internvl3':generate_answer_internvl3, 'internvl3/38B/': generate_answer_internvl3_38B,
                   'internvl3/78B/': generate_answer_internvl3_38B,
                   'qwen2.5vl/32B/': generate_answer_qwen25vl_32B,  'qwen2.5vl/72B/': generate_answer_qwen25vl_32B,
@@ -174,5 +174,5 @@ def generate_answer(image_path, prompt, tokenizer, image_processor, context_len,
         generation_type = template.split('/')[0]
     else:
         generation_type = template
-    answer = prompt_map[generation_type](image_path, prompt, tokenizer, image_processor, context_len, model, max_tokens)
+    answer = prompt_map[generation_type](image_path, prompt, tokenizer, model, max_tokens)
     return answer
